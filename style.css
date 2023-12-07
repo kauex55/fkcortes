@@ -3,12 +3,22 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #000;
+    background: linear-gradient(to bottom, #333, #000); /* Gradiente de preto para cinza escuro */
     color: #fff;
+}
+
+header {
+    background-color: #000; /* Preto */
+    padding: 20px;
+}
+
+.logo {
+    max-width: 150px;
 }
 
 h1 {
     color: #ffd700; /* Dourado */
+    margin-bottom: 20px;
 }
 
 button {
@@ -19,33 +29,134 @@ button {
     border: none;
     cursor: pointer;
     border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #cca300; /* Dourado mais escuro para realce */
 }
 
 form {
     display: inline-block;
     text-align: left;
-    background-color: #fff;
-    padding: 20px;
+    background-color: #000; /* Preto */
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+    margin: 20px auto; /* Centralizar o formulário */
+    max-width: 400px;
+    width: 100%;
 }
 
 label {
     display: block;
-    margin-bottom: 8px;
-    color: #000;
+    margin-bottom: 12px;
+    color: #ffd700; /* Dourado */
 }
 
 input {
-    width: 100%;
+    width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid #fff; /* Branco */
     border-radius: 4px;
     box-sizing: border-box;
+    background-color: #333; /* Cinza mais escuro */
+    color: #fff;
 }
 
-button:hover {
-    background-color: #ffd700; /* Dourado mais escuro para realce */
+input:focus {
+    outline: none;
+    border-color: #ffd700; /* Dourado ao focar */
 }
+
+button, input[type="submit"] {
+    width: 100%;
+}
+
+
+.faq-secao {
+    margin-left: 80px;
+    padding: 20px 0px 0px 0px;
+}
+
+
+h3 {
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--color-brown);
+    border-bottom: 1px solid #D8D8D8;
+    padding: 10px;
+    font-family: var(--font-primary);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+.faq-secao span {
+    font-size: 20px;
+}
+
+.faq-title {
+    color: var(--color-title);
+    font-family: var(--font-display);
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 26px 0px 0px 0px;
+}
+
+
+p {
+    color: var(--color-text);
+    font-family: var(--font-primary);
+    font-size: 17.6px;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .faq-secao {
+        margin-left: 40px;
+        padding: 20px 0px 0px 0px;
+    }
+    .faq-title {
+        font-size: 60px;
+    }
+    h3 {
+        font-size: 22px;
+        margin-left: 40px;
+    }
+    p {
+        margin-left: 40px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .faq1 {
+        margin-left: 40px;
+        padding: 20px 0px 0px 0px;
+    }
+    .faq-title {
+        font-size: 55px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 16px;
+        margin-left: 40px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .faq-title {
+        font-size: 48px;
+    }
+    .faq-secao {
+        margin-left: 15px;
+        padding: 20px 0px 0px 0px;
+    }
+}
+
