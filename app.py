@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
-# Exemplo de dados (substitua isso por seu mecanismo de armazenamento real)
 agendamentos = []
 
 @app.route('/', methods=['GET'])
@@ -12,7 +11,6 @@ def index():
 @app.route('/agendar', methods=['GET', 'POST'])
 def agendar():
     if request.method == 'POST':
-        # Lógica para agendar horário
         data = request.form['data']
         horario = request.form['horario']
         novo_agendamento = {'data': data, 'horario': horario}
@@ -31,7 +29,6 @@ def gerenciar_agendamento(agendamento_id):
             return jsonify({'error': 'ID de agendamento inválido'}), 404
 
     elif request.method == 'PUT':
-        # Lógica para atualizar agendamento
         if 0 <= agendamento_id < len(agendamentos):
             data = request.form['data']
             horario = request.form['horario']

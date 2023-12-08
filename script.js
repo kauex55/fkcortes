@@ -4,7 +4,6 @@ document.getElementById('agendamentoForm').addEventListener('submit', function (
     const data = document.getElementById('data').value;
     const horario = document.getElementById('horario').value;
 
-    // Verificar se é uma operação de criação ou atualização
     const agendamentoId = document.getElementById('agendamentoId').value;
     const method = agendamentoId ? 'PUT' : 'POST';
     const url = agendamentoId ? `/agendamentos/${agendamentoId}` : '/agendar';
@@ -23,13 +22,11 @@ document.getElementById('agendamentoForm').addEventListener('submit', function (
     .then(data => {
         alert(data.message);
 
-        // Adicione um elemento para exibir o recado na página
         const recadoDiv = document.createElement('div');
         recadoDiv.innerText = 'Horário agendado com sucesso!';
         recadoDiv.className = 'recado';
         document.body.appendChild(recadoDiv);
 
-        // Limpar os campos do formulário após o agendamento
         document.getElementById('agendamentoForm').reset();
     })
     .catch(error => {
@@ -44,7 +41,6 @@ function excluirAgendamento(agendamentoId) {
     .then(response => response.json())
     .then(data => {
         alert(data.message);
-        // Atualizar a página ou realizar outras ações necessárias
     })
     .catch(error => {
         console.error('Erro:', error);
