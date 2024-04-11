@@ -6,7 +6,7 @@ agendamentos = []
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('index.html', agendamentos=agendamentos)
+    return render_template('index.html')
 
 @app.route('/agendar', methods=['GET', 'POST'])
 def agendar():
